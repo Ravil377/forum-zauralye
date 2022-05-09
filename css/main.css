@@ -5099,7 +5099,7 @@ form.-pending::after {
 }
 
 .-speaker .bt {
-  background: #00a8ff url(../images/decor/button_decor.png) no-repeat;
+  background: #00a8ff url(../images/decor/button_decor.png) bottom left no-repeat;
   border-radius: 5px;
   padding: 18px 0 15px;
   max-width: 229px;
@@ -5111,7 +5111,7 @@ form.-pending::after {
 }
 
 .-memory .bt {
-  background: #00a8ff url(../images/decor/button_decor.png) no-repeat;
+  background: #00a8ff url(../images/decor/button_decor.png) bottom left no-repeat;
   border-radius: 5px;
   padding: 18px 0 15px;
   max-width: 229px;
@@ -5298,6 +5298,17 @@ form.-pending::after {
 @media (min-width: 640px) {
   .-about {
     background: url("../images/decor/decor_welcome-left-bg.png") left no-repeat, url("../images/decor/decor_welcome-right-bg.png") right no-repeat, rgb(248, 252, 255);
+  }
+}
+
+.-about .info {
+  background: #FFFFFF;
+  padding: 21px;
+  border-radius: 10px;
+}
+@media (min-width: 960px) {
+  .-about .info {
+    padding-bottom: 67px;
   }
 }
 
