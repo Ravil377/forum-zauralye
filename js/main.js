@@ -5,13 +5,33 @@
 /*!**************************************!*\
   !*** ./src/components/components.js ***!
   \**************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./who-goes/who-goes */ "./src/components/who-goes/who-goes.js");
+/* harmony import */ var _who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0__);
+// import simpleParallax from 'simple-parallax-js';
 // Form
 // import './form/form'
-// Hamburger
+ // Hamburger
 //import './hamburger/hamburger'
 //import './modal/modal'
+
+/***/ }),
+
+/***/ "./src/components/who-goes/who-goes.js":
+/*!*********************************************!*\
+  !*** ./src/components/who-goes/who-goes.js ***!
+  \*********************************************/
+/***/ (() => {
+
+var image = document.getElementsByClassName('bgparalax');
+new simpleParallax(image, {
+  orientation: 'down',
+  scale: 1.8,
+  overflow: true
+});
 
 /***/ }),
 
@@ -112,7 +132,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../vendor/vendor */ "./src/vendor/vendor.js");
 /* harmony import */ var _vendor_vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_vendor__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/components */ "./src/components/components.js");
-/* harmony import */ var _components_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_components__WEBPACK_IMPORTED_MODULE_1__);
 // Vendor
  // Components
 

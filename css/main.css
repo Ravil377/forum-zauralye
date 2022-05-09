@@ -5043,8 +5043,18 @@ form.-pending::after {
 }
 
 .-who-goes {
-  background: url("../images/decor/background-who-goes.png") center no-repeat, rgb(248, 252, 255);
-  background-size: cover;
+  background: rgb(248, 252, 255);
+  position: relative;
+}
+
+.-who-goes .bgparalax {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
 }
 
 .-who-goes .bg {
@@ -5066,12 +5076,29 @@ form.-pending::after {
 }
 
 .-speaker {
-  background: url("../images/decor/background-who-goes.png") center no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.-speaker .bgparalax {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+}
+
+.-speaker .bgparalax2 {
+  display: none;
 }
 
 @media (min-width: 1600px) {
-  .-speaker {
-    background: url("../images/decor/decor_right-bg.png") left no-repeat, url("../images/decor/background-who-goes.png") center no-repeat;
+  .-speaker .bgparalax2 {
+    display: block;
+    left: 0;
+    position: absolute;
   }
 }
 .-speaker-list > :not(:empty) {
@@ -5118,14 +5145,10 @@ form.-pending::after {
   width: 100%;
 }
 
-@media (min-width: 640px) {
-  .-welcome {
-    background: url("../images/decor/decor_welcome-left-bg.png") left no-repeat, url("../images/decor/decor_welcome-right-bg.png") right no-repeat;
-  }
-}
 @media (min-width: 1000px) {
   .-welcome {
-    background: url("../images/decor/decor_welcome-left-bg.png") left -17px no-repeat;
+    background: url(../images/decor/decor_welcome-left-bg.png) -87px 2px no-repeat;
+    z-index: -1;
   }
 }
 
@@ -5139,10 +5162,11 @@ form.-pending::after {
 
 .-welcome .welcome {
   grid-area: logo;
-  min-height: 718px;
+  min-height: 750px;
   width: fit-content;
   display: flex;
   align-items: center;
+  padding-top: 50px;
 }
 @media (min-width: 1250px) {
   .-welcome .welcome {
@@ -5150,7 +5174,12 @@ form.-pending::after {
     min-height: auto;
     margin-top: 178px;
     margin-bottom: 122px;
+    padding-top: 0;
   }
+}
+
+.-welcome .-inner {
+  margin-bottom: 0;
 }
 
 .-welcome .welcome__top {
@@ -5220,10 +5249,12 @@ form.-pending::after {
   margin-top: 53px;
   grid-area: c;
   order: 2;
+  margin-bottom: 120px;
 }
 @media (min-width: 1250px) {
   .-welcome .city {
     order: 1;
+    margin-bottom: 0;
   }
 }
 
@@ -5254,13 +5285,15 @@ form.-pending::after {
   position: absolute;
   z-index: -1;
   right: -370px;
+  animation: 3s 1.5s move infinite alternate ease-out;
 }
 
 .-welcome .decor img:nth-child(3) {
   position: absolute;
-  z-index: -1;
-  right: -327px;
+  z-index: -2;
+  right: -736px;
   top: 0;
+  animation: 3s 3s move infinite alternate ease-out;
 }
 
 @keyframes move {
@@ -5278,7 +5311,7 @@ form.-pending::after {
 @media (min-width: 1000px) {
   .-welcome .decor img:nth-child(2) {
     display: block;
-    animation: 2s move infinite alternate ease-out;
+    animation: 3s move infinite alternate ease-out;
     opacity: 1;
   }
 }
@@ -5286,10 +5319,38 @@ form.-pending::after {
 * + .-welcome {
   overflow-x: hidden;
   margin-top: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .-welcome .-inner {
   margin-top: 0 !important;
+}
+
+.-welcome .recommendation {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  max-width: 476px;
+  width: 100%;
+  background: url("../images/welcome-covid.png") left bottom no-repeat, #F8FCFF;
+  background-size: contain;
+  box-shadow: 0px 0px 49px 0px rgba(255, 255, 255, 0.72) inset;
+  padding: 10px 10px 10px 110px;
+  border-radius: 20px 20px 0 0;
+}
+@media (min-width: 500px) {
+  .-welcome .recommendation {
+    padding: 22px 52px 22px 110px;
+  }
+}
+.-welcome .recommendation p {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #051E48;
 }
 
 .-about {
@@ -5297,7 +5358,7 @@ form.-pending::after {
 }
 @media (min-width: 640px) {
   .-about {
-    background: url("../images/decor/decor_welcome-left-bg.png") left no-repeat, url("../images/decor/decor_welcome-right-bg.png") right no-repeat, rgb(248, 252, 255);
+    background: url("../images/decor/welcome-decor-bg.png") left no-repeat, url("../images/decor/decor_welcome-right-bg.png") right no-repeat, rgb(248, 252, 255);
   }
 }
 
