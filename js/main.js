@@ -11,12 +11,41 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./who-goes/who-goes */ "./src/components/who-goes/who-goes.js");
 /* harmony import */ var _who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_who_goes_who_goes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _program_program__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./program/program */ "./src/components/program/program.js");
+/* harmony import */ var _program_program__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_program_program__WEBPACK_IMPORTED_MODULE_1__);
 // import simpleParallax from 'simple-parallax-js';
 // Form
 // import './form/form'
+
  // Hamburger
 //import './hamburger/hamburger'
 //import './modal/modal'
+
+/***/ }),
+
+/***/ "./src/components/program/program.js":
+/*!*******************************************!*\
+  !*** ./src/components/program/program.js ***!
+  \*******************************************/
+/***/ (() => {
+
+var programContainer = document.querySelector('.-program');
+var tabs = programContainer.querySelector('.tabs');
+tabs && tabs.addEventListener('click', function (e) {
+  var tab = e.target.closest('.tab');
+  var id = tab.dataset.day;
+
+  if (tab) {
+    tabs.querySelector('.tab_active').classList.remove('tab_active');
+    tab.classList.add('tab_active');
+    tabContentActive(id);
+  }
+});
+
+var tabContentActive = function tabContentActive(id) {
+  document.querySelector('.tabs__content_active').classList.remove('tabs__content_active');
+  document.querySelector("[id = \"".concat(id, "\"]")).classList.add('tabs__content_active');
+};
 
 /***/ }),
 
