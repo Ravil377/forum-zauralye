@@ -17837,13 +17837,19 @@ form.-pending::after {
 }
 .-program .tabs__content .tablehead__title {
   font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   padding: 15px 0;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+@media (min-width: 576px) {
+  .-program .tabs__content .tablehead__title {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+  }
 }
 .-program .tabs__content .tablehead__title span {
   display: block;
@@ -17852,13 +17858,19 @@ form.-pending::after {
   padding: 15px 0;
   position: relative;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.6875rem;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   max-width: 124px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 576px) {
+  .-program .tabs__content .tablehead__time {
+    font-size: 1rem;
+    line-height: 1.6875rem;
+  }
 }
 .-program .tabs__content .tablehead__border {
   border-left: 1px solid #FFFFFF;
@@ -17870,8 +17882,8 @@ form.-pending::after {
 .-program .tabs__content .table__time {
   text-align: center;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.6875rem;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   max-width: 124px;
   width: 100%;
   padding: 10px 0;
@@ -17879,17 +17891,25 @@ form.-pending::after {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 576px) {
+  .-program .tabs__content .table__time {
+    font-size: 1rem;
+    line-height: 1.6875rem;
+  }
+}
 .-program .tabs__content .table__text {
   text-align: left;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.6875rem;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
   border-left: 1px solid #000;
   padding: 10px 15px;
 }
 @media (min-width: 768px) {
   .-program .tabs__content .table__text {
     text-align: center;
+    font-size: 1rem;
+    line-height: 1.6875rem;
   }
 }
 .-program .tabs__content .table__text p {
@@ -17908,7 +17928,12 @@ form.-pending::after {
   display: block;
   margin-top: 20px;
   font-style: italic;
-  font-size: 0.9375rem;
+  font-size: 0.6875rem;
+}
+@media (min-width: 768px) {
+  .-program .tabs__content .table__text span {
+    font-size: 0.9375rem;
+  }
 }
 .-program .tabs__content .table__text_left {
   text-align: left;
@@ -17943,6 +17968,44 @@ form.-pending::after {
   max-width: 229px;
   width: 100%;
   color: #FFFFFF;
+}
+
+.-program .tablecell .col-xl p {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #007F4F;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .-program .tablecell .col-xl p {
+    display: none;
+  }
+}
+
+.-program .col-xl {
+  text-align: left;
+}
+.-program .col-xl:last-child {
+  border-bottom: unset;
+}
+@media (min-width: 1200px) {
+  .-program .col-xl {
+    border-bottom: unset;
+  }
+}
+
+.-program .col-xl.table__text_left {
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+.-program .col-xl.table__text_left:last-child {
+  border-bottom: unset;
+}
+@media (min-width: 1200px) {
+  .-program .col-xl.table__text_left {
+    border-bottom: unset;
+  }
 }
 
 /**
